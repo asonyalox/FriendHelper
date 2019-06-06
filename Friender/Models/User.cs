@@ -8,7 +8,10 @@ namespace Friender.Models
 {
     public class User:IdentityUser
     {
-        public int Year { get; set; }
+        public List<UserCategory> UserCategories { get; set; }
+
+        //public int LocationId { get; set; }
+        //public Location Location { get; set; }
 
         
     }
