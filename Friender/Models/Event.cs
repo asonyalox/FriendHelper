@@ -12,7 +12,7 @@ namespace Friender.Models
        public string Photos { get; set; }
        public string Category { get; set; }
        [DataType(DataType.Date)]
-       public DateTime Dates { get; set; }
+       public DateTime EventDates { get; set; }
        public string Owner { get; set; }
        public string Description { get; set; }         
 

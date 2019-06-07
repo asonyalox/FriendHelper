@@ -4,14 +4,16 @@ using Friender.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Friender.Migrations
 {
     [DbContext(typeof(FrienderContext))]
-    partial class FrienderContextModelSnapshot : ModelSnapshot
+    [Migration("20190607113946_jora")]
+    partial class jora
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,9 +42,9 @@ namespace Friender.Migrations
 
                     b.Property<string>("Category");
 
-                    b.Property<string>("Description");
+                    b.Property<DateTime>("Dates");
 
-                    b.Property<DateTime>("EventDates");
+                    b.Property<string>("Description");
 
                     b.Property<string>("Owner");
 
@@ -75,12 +77,8 @@ namespace Friender.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<DateTime>("BirthDate");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
-
-                    b.Property<string>("Description");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
